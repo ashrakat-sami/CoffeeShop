@@ -1,0 +1,60 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+  background-color: #F6EBDA;
+}
+.btn{
+    border-color: #322118;
+    color: #322118;
+    background-color: white;
+}
+.btn:hover{
+    background-color: #B17F59;
+    border-color: #322118;
+}
+
+#viptextColor,span{
+    color: #FF902A;
+}
+#nav{
+  margin-left: 15vw;
+  font-weight: bold;
+}
+
+.enjoy{
+font-weight: bolder;
+font-size: 70px;
+}
+#fixedOrderNow{
+position: absolute; 
+right: 0; 
+bottom: 0; 
+margin: 2vw;
+ border: none; 
+ border-radius: 20px;
+ font-size: medium;
+}
+#enjoyAndimg{
+margin-left: 8%;
+margin-top: 3%;
+}
+.firstLine{
+font-weight: bolder;
+font-size: xx-large;
+color: #000;
+}
+.aboutParagraph{
+font-size: large;
+color: #000;    
+}
+footer{
+background-color: #322118;
+
+}
+a{
+color: white;
+text-decoration: none;
+font-size: small;
+}

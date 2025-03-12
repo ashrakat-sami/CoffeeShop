@@ -9,52 +9,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
     <style>
-        *{
-            padding: 0;
-            margin: 0;
-        }
-        body{
-          background-color: #F6EBDA;
-        }
-        .btn{
-            border-color: #322118;
-            color: #322118;
-            background-color: white;
-        }
-        .btn:hover{
-            background-color: #B17F59;
-            border-color: #322118;
-        }
-      
-        #viptextColor,span{
-            color: #FF902A;
-        }
-        #nav{
-          margin-left: 15vw;
-          font-weight: bold;
-        }
-      
-       .enjoy{
-        font-weight: bolder;
-        font-size: 70px;
-       }
-       #fixedOrderNow{
-        position: absolute; 
-        right: 0; 
-        bottom: 0; 
-        margin: 2vw;
-         border: none; 
-         border-radius: 20px;
-         font-size: medium;
-       }
-       #enjoyAndimg{
-        margin-left: 12%;
-        margin-top: 3%;
-       }
+       
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg mt-4"id="nav">
+    <!-- NAV BAR -->
+    <nav class="navbar navbar-expand-lg  mt-4"id="nav">
         <div class="container mx-lg-auto"> 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -62,7 +22,7 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav " id="links"> 
                     <a id="viptextColor" class="nav-link active mx-lg-5" aria-current="page" href="index.html">Home</a>
-                    <a class="nav-link mx-lg-5" href="#">About Us</a>
+                    <a class="nav-link mx-lg-5" href="#aboutUs">About Us</a>
                     <a class="nav-link mx-lg-5" href="#">Menu</a>
                 </div>
                 <form class="d-flex" role="search">
@@ -76,23 +36,104 @@
             </div>
         </div>
     </nav>
-  
+  <!-- Home Content -->
     <div class="container " id="enjoyAndimg">
     <div class="row mt-5 ">
     <div class="enjoy col-6">
         Enjoy your <span>Coffee</span> <br> before your <br> activity
     </div>
 
-    <div  class="  col-6 ">
+    <div  class="  col-6 mt-5">
         <img id="cup" src="images/cup.jpg" alt="cup" width="390px" height="390px" class="rounded-circle mt-5">     
     </div>
 </div> 
 </div>
 
+<!-- Fixed order now button -->
 <div  class="fixed-bottom text-center mb-5">
     <div id="fixedOrderNow" class="btn btn-lg btn-outline-dark ">Order Now <i class="bi bi-cart3"></i></div>
 
 </div>
+<br><br><br><br>
+
+
+<!-- ABOUT US -->
+ <section id="aboutUs">
+    <div class="container mt-5">
+        <div class="row">
+            
+            <div class="col-6 ">
+                <h1 class="firstLine" >About us</h1>
+                <p class="firstLine">we provide Quality Coffee,<br> and ready to deliver.</p>
+                <p class="aboutParagraph">
+                    We are a company specializing in the creation and distribution of delicious beverages.
+                    Our flagship product is crafted with a secret recipe, carefully honed to perfection,
+                    and served to customers worldwide. With a vision centered on delivering the finest coffee drinks,
+                     we strive to exceed the expectations of our customers at every sip.
+                </p>
+            </div>
+            <div  class="  col-6 ">
+                <img id="cup" src="images/cup2.jpg" alt="cup" width="390px" height="390px" class="rounded-circle mt-5 mx-lg-5">     
+            </div>
+        </div>
+    </div>
+ </section>
+ <br><br><br><br>
+ 
+ <!-- FOOTER -->
+ <footer class="text-white py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <h5>Company</h5>
+          <ul class="list-unstyled">
+            <li><a href="#aboutUs">About Us</a></li>
+            <li><a href="#">Why Choose Us</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Testimonial</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5>Resources</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms and Condition</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5>Product</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Project Management</a></li>
+            <li><a href="#">Time Tracker</a></li>
+            <li><a href="#">Time Schedule</a></li>
+            <li><a href="#">Lead Generate</a></li>
+            <li><a href="#">Remote Collaboration</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5>Coffee</h5>
+          <p>Subscribe to our Newsletter</p>
+          <div class=" mb-3">
+            <input type="email" class="form-control mx-lg-2" placeholder="Enter your Email">
+            <div class="">
+              <button class="btn btn-primary mx-lg-2 mt-1 " type="button">Subscribe</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="col-md-12">
+        <p class="text-center ">Copyright @2025</p>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
 
 
     <script src="main.js"></script>
