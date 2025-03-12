@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Street</title>
+    <link rel="icon" type="image/png" href="images/coffee-cup.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+          background-color: #F6EBDA;
+        }
+        .btn{
+            border-color: #322118;
+            color: #322118;
+            background-color: white;
+        }
+        .btn:hover{
+            background-color: #B17F59;
+            border-color: #322118;
+        }
+      
+        #viptextColor,span{
+            color: #FF902A;
+        }
+        #nav{
+          margin-left: 15vw;
+          font-weight: bold;
+        }
+      
+       .enjoy{
+        font-weight: bolder;
+        font-size: 70px;
+       }
+       #fixedOrderNow{
+        position: absolute; 
+        right: 0; 
+        bottom: 0; 
+        margin: 2vw;
+         border: none; 
+         border-radius: 20px;
+         font-size: medium;
+       }
+       #enjoyAndimg{
+        margin-left: 12%;
+        margin-top: 3%;
+       }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg mt-4"id="nav">
+        <div class="container mx-lg-auto"> 
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav " id="links"> 
+                    <a id="viptextColor" class="nav-link active mx-lg-5" aria-current="page" href="index.html">Home</a>
+                    <a class="nav-link mx-lg-5" href="#">About Us</a>
+                    <a class="nav-link mx-lg-5" href="#">Menu</a>
+                </div>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2 mx-lg-5" type="search" placeholder="Search" aria-label="Search">
+                    <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
+                </form>
+                <a class="nav-link mx-lg-5" href="#">
+                  <i class="bi bi-cart3"></i>
+                </a>
+               
+            </div>
+        </div>
+    </nav>
+  
+    <div class="container " id="enjoyAndimg">
+    <div class="row mt-5 ">
+    <div class="enjoy col-6">
+        Enjoy your <span>Coffee</span> <br> before your <br> activity
+    </div>
+
+    <div  class="  col-6 ">
+        <img id="cup" src="images/cup.jpg" alt="cup" width="390px" height="390px" class="rounded-circle mt-5">     
+    </div>
+</div> 
+</div>
+
+<div  class="fixed-bottom text-center mb-5">
+    <div id="fixedOrderNow" class="btn btn-lg btn-outline-dark ">Order Now <i class="bi bi-cart3"></i></div>
+
+</div>
+
+
+    <script src="main.js"></script>
+</body>
+</html>
