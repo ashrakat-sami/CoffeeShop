@@ -14,7 +14,7 @@
     <!-- CART -->
     <div class="container mt-5 mb-5">
         <div class="d-flex justify-content-center row">
-            <div class="col-md-8">
+            <div class="col-md-8" id="cart-items-container">
                 <div class="p-2">
                     <div class="navbar-nav " id="links"> 
                         <a id="viptextColor" class="nav-link active mx-lg-3 fs-3" aria-current="page" href="menu.html"><i class="bi bi-arrow-left"></i></a>
@@ -22,85 +22,119 @@
                     </div>
                     <h4>Shopping cart</h4>
                 </div>
-                <div class="d-flex flex-row justify-content-between align-items-center p-2 bg-white mt-4 px-3 rounded">
-                    <div class="mr-1"><img class="rounded" src="images/americano.jpg" width="100vw" height="100vh"></div>
-                    <div class="d-flex flex-column align-items-center product-details"><span class="font-weight-bold bc fs-5 ">Americano</span>
-                        <div class="d-flex flex-row product-desc">
-                            <div class="size mr-1"><span class="text-grey bc">type:</span><span class="font-weight-bold bc">&nbsp;cold</span></div>
-                        </div>
-                    </div>
-                    <div class="d-flex flex-row align-items-center qty">
-                        <i class="bi bi-dash text-danger fs-3"></i>
-                        <h5 class="text-grey mt-1 mr-1 ml-1 mx-lg-2">2</h5>
-                        <i class="bi bi-plus text-success fs-3"></i></div>
-                    <div>
-                        <h5 class="text-grey">$20.00</h5>
-                    </div>
-                    <div class="d-flex align-items-center"><i class="bi bi-trash3 fs-3 mb-1 text-danger"></i></div>
-                </div>
+              
 
-
-                 <div class="d-flex flex-row justify-content-between align-items-center p-2 bg-white mt-4 px-3 rounded">
-                    <div class="mr-1"><img class="rounded" src="images/americano.jpg" width="100vw" height="100vh"></div>
-                    <div class="d-flex flex-column align-items-center product-details"><span class="font-weight-bold">Americano</span>
-                        <div class="d-flex flex-row product-desc">
-                            <div class="size mr-1"><span class="text-grey">type:</span><span class="font-weight-bold">&nbsp;cold</span></div>
-                        </div>
-                    </div>
-                    <div class="d-flex flex-row align-items-center qty">
-                        <i class="bi bi-dash text-danger fs-3"></i>
-                        <h5 class="text-grey mt-1 mr-1 ml-1 mx-lg-2">2</h5>
-                        <i class="bi bi-plus text-success fs-3"></i></div>
-                    <div>
-                        <h5 class="text-grey">$20.00</h5>
-                    </div>
-                    <div class="d-flex align-items-center"><i class="bi bi-trash3 fs-3 mb-1 text-danger"></i></div>
-                </div>
-
-               <div class="d-flex flex-row justify-content-between align-items-center p-2 bg-white mt-4 px-3 rounded">
-                    <div class="mr-1"><img class="rounded" src="images/americano.jpg" width="100vw" height="100vh"></div>
-                    <div class="d-flex flex-column align-items-center product-details"><span class="font-weight-bold">Americano</span>
-                        <div class="d-flex flex-row product-desc">
-                            <div class="size mr-1"><span class="text-grey">type:</span><span class="font-weight-bold">&nbsp;cold</span></div>
-                        </div>
-                    </div>
-                    <div class="d-flex flex-row align-items-center qty">
-                        <i class="bi bi-dash text-danger fs-3"></i>
-                        <h5 class="text-grey mt-1 mr-1 ml-1 mx-lg-2">2</h5>
-                        <i class="bi bi-plus text-success fs-3"></i></div>
-                    <div>
-                        <h5 class="text-grey">$20.00</h5>
-                    </div>
-                    <div class="d-flex align-items-center"><i class="bi bi-trash3 fs-3 mb-1 text-danger"></i></div>
-                </div>
-
-                <div class="d-flex flex-row justify-content-between align-items-center p-2 bg-white mt-4 px-3 rounded">
-                    <div class="mr-1"><img class="rounded" src="images/americano.jpg" width="100vw" height="100vh"></div>
-                    <div class="d-flex flex-column align-items-center product-details"><span class="font-weight-bold">Americano</span>
-                        <div class="d-flex flex-row product-desc">
-                            <div class="size mr-1"><span class="text-grey">type:</span><span class="font-weight-bold">&nbsp;cold</span></div>
-                        </div>
-                    </div>
-                    <div class="d-flex flex-row align-items-center qty">
-                        <i class="bi bi-dash text-danger fs-3"></i>
-                        <h5 class="text-grey mt-1 mr-1 ml-1 mx-lg-2">2</h5>
-                        <i class="bi bi-plus text-success fs-3"></i></div>
-                    <div>
-                        <h5 class="text-grey">$20.00</h5>
-                    </div>
-                    <div class="d-flex align-items-center"><i class="bi bi-trash3 fs-3 mb-1 text-danger"></i></div>
-                </div>
-
-
-                <div class="d-flex flex-row align-items-center mt-3 p-2 bg-white rounded">
+                <!-- <div class="d-flex flex-row align-items-center mt-3 p-2 bg-white rounded">
                 <input type="text" class="form-control border-0 gift-card" placeholder="Discount code">
                 <button class="btn  btn-sm ml-2" type="button">Apply</button>
-                </div>
+                </div> -->
                 
-                <div class="d-flex flex-row align-items-center mt-3 p-2 ">
-                <button class="btn  btn-block btn-lg ml-5 pay-button" type="button" id="proceed">Proceed to Pay</button></div>
+               
             </div>
         </div>
     </div>
+
+
+
+    <script>
+        function displayCartItems() {
+            let cart = localStorage.getItem('cart');
+            let cartItemsContainer = document.getElementById('cart-items-container');
+            if (cart) {
+                cart = JSON.parse(cart);
+    
+                cart.forEach(item => {
+                    let itemDiv = document.createElement('div');
+                    itemDiv.classList.add('d-flex', 'flex-row', 'justify-content-between', 'align-items-center', 'p-2', 'bg-white', 'mt-4', 'px-3', 'rounded');
+    
+                    itemDiv.innerHTML = `
+                        <div class="mr-1"><img class="rounded" src="${item.image}" width="100vw" height="100vh"></div>
+                        <div class="d-flex flex-column align-items-center product-details"><span class="font-weight-bold bc fs-5 ">${item.id}</span>
+                            <div class="d-flex flex-row product-desc">
+                                <div class="size mr-1">
+                                    <span class="text-grey bc">type:</span>
+                                    <span class="font-weight-bold bc hotcold">${item.type}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row align-items-center qty">
+                            <i class="bi bi-dash text-danger fs-3" data-id="${item.id}"></i>
+                            <h5 class="text-grey mt-1 mr-1 ml-1 mx-lg-2" id="quantity-${item.id}">${item.quantity}</h5>
+                            <i class="bi bi-plus text-success fs-3" data-id="${item.id}"></i>
+                        </div>
+                        <div>
+                            <h5 class="text-grey" id="price-${item.id}">$${item.totalPrice}</h5>
+                        </div>
+                        <div class="d-flex align-items-center"><i class="bi bi-trash3 fs-3 mb-1 text-danger"></i></div>
+                    `;
+    
+                    cartItemsContainer.appendChild(itemDiv);
+                });
+
+                let proceedDiv = document.createElement('div');
+                proceedDiv.classList.add('d-flex', 'flex-row', 'align-items-center', 'mt-3', 'p-2');
+                proceedDiv.innerHTML = `
+                    <button class="btn btn-block btn-lg ml-5 pay-button" type="button" id="proceed">Proceed to Pay</button>
+                `;
+                cartItemsContainer.appendChild(proceedDiv);
+            }else{
+                let emptyCart = document.createElement('div');
+                emptyCart.classList.add('d-flex', 'flex-row', 'justify-content-center', 'align-items-center', 'p-2', 'bg-white', 'mt-4', 'px-3', 'rounded');
+                emptyCart.innerHTML = `
+                    <h4>Your cart is empty!</h4>
+                `;
+                cartItemsContainer.appendChild(emptyCart);
+            }
+            }
+        
+    
+        displayCartItems();
+
+
+        let proceedButton = document.getElementById('proceed');
+        if (proceedButton) {
+            proceedButton.addEventListener('click', () => {
+                alert('Payment successful!');
+                localStorage.removeItem('cart');
+                window.location.href = 'menu.html';
+            });
+        }
+
+        let updateQuantity = (button, increment) => {
+            let itemId = button.getAttribute('data-id');
+            let quantityElement = document.getElementById(`quantity-${itemId}`);
+            let totalPriceElement = document.getElementById(`price-${itemId}`);
+            if (quantityElement) {
+                let quantity = parseInt(quantityElement.textContent);
+                let price = parseInt(totalPriceElement.textContent.replace('$', ''));
+                let unitPrice = price / quantity;
+                quantity = increment ? quantity + 1 : quantity - 1;
+                if (quantity > 0) {
+                    quantityElement.textContent = quantity;
+                    totalPriceElement.textContent = `$${quantity * unitPrice}`;
+                }
+            }
+        };
+
+        document.querySelectorAll('.bi-plus').forEach(button => {
+            button.addEventListener('click', () => updateQuantity(button, true));
+        });
+
+        document.querySelectorAll('.bi-dash').forEach(button => {
+            button.addEventListener('click', () => updateQuantity(button, false));
+        });
+
+let trach=document.querySelectorAll('.bi-trash3');
+trach.forEach((item)=>{
+    item.addEventListener('click', () => {
+        let itemId = item.parentElement.parentElement.querySelector('.bi-dash').getAttribute('data-id');
+        let cart = JSON.parse(localStorage.getItem('cart'));
+        cart = cart.filter(cartItem => cartItem.id !== itemId || cartItem.type !== item.parentElement.parentElement.querySelector('.hotcold').textContent);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        item.parentElement.parentElement.remove();
+    });
+    });
+
+    </script>
 </body>
 </html>

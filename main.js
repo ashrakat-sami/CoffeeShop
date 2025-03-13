@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="hotOrCold">
                   ${typeButtonsHTML}
                 </div>
-                <div class="btn btn-lg btn-outline-dark float-end">
+                <div class="btn btn-lg btn-outline-dark float-end mt-2" onclick="addToCart()">
                   <i class="bi bi-plus-lg"></i>
                 </div>
               </p>
@@ -41,6 +41,10 @@ document.addEventListener('DOMContentLoaded', function() {
             // Reset background color for all buttons in the same group
             const buttonGroup = clickedButton.parentNode; // Get the parent div (.hotOrCold)
             const buttonsInGroup = buttonGroup.querySelectorAll('.type'); // Select all buttons within that group
+            
+            let type = clickedButton.textContent;
+            localStorage.setItem('type', type);
+
             buttonsInGroup.forEach(button => {
               button.style.backgroundColor = 'white'; // Or any default color you want
               button.style.color = 'black';
@@ -54,3 +58,36 @@ document.addEventListener('DOMContentLoaded', function() {
       })
       .catch(error => console.error('Error fetching drinks:', error));
   });
+
+  //add to cart's function
+    function addToCart() {
+        let cart = localStorage.getItem('cart');
+        if (cart) {
+            cart = JSON.parse(cart);
+        } else {
+            cart = [];
+        }
+        let type = localStorage.getItem('type');
+        let cardElement = event.target.closest('.card');
+        let drinkId = cardElement.querySelector('.drinkImg').alt;
+        let drinkPrice = parseFloat(cardElement.querySelector('.price').textContent.replace('$', ''));
+        let drinkImage = cardElement.querySelector('.drinkImg').src;
+
+        let existingDrink = cart.find(item => item.id === drinkId && item.type === type);
+
+        if (existingDrink) {
+            existingDrink.quantity += 1;
+            existingDrink.totalPrice += drinkPrice;
+        } else {
+            let drink = {
+                id: drinkId,
+                type: type,
+                image: drinkImage,
+                quantity: 1,
+                totalPrice: drinkPrice
+            };
+            cart.push(drink);
+        }
+
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }
