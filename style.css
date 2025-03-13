@@ -10,9 +10,10 @@ body{
     color: #322118;
     background-color: white;
 }
-.btn:hover{
+.btn:hover,#proceed:hover{
     background-color: #B17F59;
-    border-color: #322118;
+    border-color: #B17F59;
+    color: white;
 }
 
 #viptextColor,span{
@@ -88,4 +89,47 @@ background-color: white;
 
 footer{
   margin-top: 5%;
+}
+
+
+/* Cart */
+.size span {
+  font-size: 11px;
+}
+
+.color span {
+  font-size: 11px;
+}
+
+.product-deta {
+  margin-right: 70px;
+}
+
+.gift-card:focus {
+  box-shadow: none;
+}
+
+.pay-button {
+  color: #fff;
+}
+
+.pay-button:hover {
+  color: #fff;
+}
+
+.pay-button:focus {
+  color: #fff;
+  box-shadow: none;
+}
+
+
+.bi-dash:hover, .bi-plus:hover ,.bi-trash3:hover {
+cursor: pointer;
+}
+#proceed{
+  color: #000;
+  margin: auto;
+}
+.bc{
+  color: #000;
 }
