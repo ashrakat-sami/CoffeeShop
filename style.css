@@ -36,7 +36,7 @@ margin: 2vw;
  border-radius: 20px;
  font-size: medium;
 }
-#enjoyAndimg{
+#enjoyAndimg,#productSection{
 margin-left: 8%;
 margin-top: 3%;
 }
@@ -57,4 +57,35 @@ a{
 color: white;
 text-decoration: none;
 font-size: small;
+}
+
+/* Drink container */
+.hotOrCold{
+  display: flex ;
+
+}
+.type{
+ 
+  margin: 1vw;
+  padding: 1vw;
+  border: 1px solid #322118;
+  border-radius: 20px;
+background-color: white;
+}
+.type:hover{
+  background-color: #F6EBDA;
+}
+
+.card-text{
+  font-weight: bold;
+}
+.drinkImg{
+  width: 23vw;
+  height: 50vh;
+  border-radius: 20px;
+  margin-top: 1%;
+}
+
+footer{
+  margin-top: 5%;
 }

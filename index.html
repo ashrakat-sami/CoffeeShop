@@ -14,7 +14,7 @@
 </head>
 <body>
     <!-- NAV BAR -->
-    <nav class="navbar navbar-expand-lg  mt-4"id="nav">
+    <nav class="navbar navbar-expand-lg  mt-4 mb-5"id="nav">
         <div class="container mx-lg-auto"> 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -23,12 +23,12 @@
                 <div class="navbar-nav " id="links"> 
                     <a id="viptextColor" class="nav-link active mx-lg-5" aria-current="page" href="index.html">Home</a>
                     <a class="nav-link mx-lg-5" href="#aboutUs">About Us</a>
-                    <a class="nav-link mx-lg-5" href="#">Menu</a>
+                    <a class="nav-link mx-lg-5" href="menu.html">Menu</a>
                 </div>
-                <form class="d-flex" role="search">
+                <!-- <form class="d-flex" role="search">
                     <input class="form-control me-2 mx-lg-5" type="search" placeholder="Search" aria-label="Search">
-                    <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
-                </form>
+                     <button class="btn btn-outline-success" type="submit">Search</button> 
+                </form> -->
                 <a class="nav-link mx-lg-5" href="#">
                   <i class="bi bi-cart3"></i>
                 </a>
@@ -36,6 +36,7 @@
             </div>
         </div>
     </nav>
+<br><br>
   <!-- Home Content -->
     <div class="container " id="enjoyAndimg">
     <div class="row mt-5 ">
@@ -55,6 +56,8 @@
 
 </div>
 <br><br><br><br>
+<br><br><br><br>
+
 
 
 <!-- ABOUT US -->
@@ -79,7 +82,74 @@
     </div>
  </section>
  <br><br><br><br>
- 
+ <!-- Products Sample Section -->
+<section id="productSection" class="">
+    <h1 class="firstLine mb-5" >Our Products</h1>
+<div class="container">
+<div class="row ">
+<!-- CARD 1 -->
+<div class="card col-4 " style="width: 25rem;">
+    <img class=" drinkImg card-img-top" src="images/cup.jpg" alt="Card image cap">
+    <div class="card-body">
+        <p class="card-text">
+                <span class="coffeeName ">Cappuccino</span>
+                <span class="price mx-lg-2 ">10$</span>
+                <div class="hotOrCold"> 
+                    <button class="type">Hot</button>
+                    <button class="type">Cold</button>
+                </div>
+                <div class="btn btn-lg btn-outline-dark float-end">
+                    <i class="bi bi-plus-lg"></i>
+                </div>
+
+        </p>
+    </div>
+  </div>
+  <!-- CARD 2 -->
+<div class="card col-4 mx-lg-3" style="width: 25rem;">
+    <img class=" drinkImg card-img-top" src="images/cup.jpg" alt="Card image cap">
+    <div class="card-body">
+        <p class="card-text">
+                <span class="coffeeName ">Cappuccino</span>
+                <span class="price mx-lg-2 ">10$</span>
+                <div class="hotOrCold"> 
+                    <button class="type">Hot</button>
+                    <button class="type">Cold</button>
+                </div>
+                <div class="btn btn-lg btn-outline-dark float-end">
+                    <i class="bi bi-plus-lg"></i>
+                </div>
+
+        </p>
+    </div>
+  </div>
+  <!-- CARD 3 -->
+<div class="card col-4 mx-lg-3" style="width: 25rem;">
+    <img class=" drinkImg card-img-top" src="images/cup.jpg" alt="Card image cap">
+    <div class="card-body">
+        <p class="card-text">
+                <span class="coffeeName ">Cappuccino</span>
+                <span class="price mx-lg-2 ">10$</span>
+                <div class="hotOrCold"> 
+                    <button class="type">Hot</button>
+                    <button class="type">Cold</button>
+                </div>
+                <div class="btn btn-lg btn-outline-dark float-end">
+                    <i class="bi bi-plus-lg"></i>
+                </div>
+
+        </p>
+    </div>
+  </div>
+</div>
+</div>
+
+<div  class="text-center mb-5 mt-5">
+    <div id="viewAllProducts" class="btn btn-lg btn-outline-dark ">View More </div>
+
+</div>
+</section>
+ <br><br><br><br>
  <!-- FOOTER -->
  <footer class="text-white py-4">
     <div class="container">
@@ -136,6 +206,17 @@
 
 
 
-    <script src="main.js"></script>
+    <script >
+        // Fixed Order Now Button
+        let fixedOrderNow = document.getElementById('fixedOrderNow');
+        fixedOrderNow.addEventListener('click',()=>{
+            window.location.href = 'menu.html';
+        });
+        // View All Products Button
+        let viewAllProducts = document.getElementById('viewAllProducts');
+        viewAllProducts.addEventListener('click', () => {
+            window.location.href = 'menu.html';
+        });
+    </script>
 </body>
 </html>

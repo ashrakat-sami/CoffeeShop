@@ -1,0 +1,59 @@
+{
+    "drinks": [
+      {
+        "Name": "Cappuccino",
+        "Price": 10,
+        "Type": ["Hot", "Cold"],
+        "Image": "images/cappuccino.jpg"
+      },
+      {
+        "Name": "Latte",
+        "Price": 12,
+        "Type": ["Hot", "Cold"],
+        "Image": "images/latte.jpg"
+      },
+      {
+        "Name": "Mocha",
+        "Price": 14,
+        "Type": ["Hot", "Cold"],
+        "Image": "images/mocha.jpg"
+      },
+      {
+        "Name": "Tea",
+        "Price": 8,
+        "Type": ["Hot", "Cold"],
+        "Image": "images/tea.jpg"
+      },
+      {
+        "Name": "Apple Cider",
+        "Price": 8,
+        "Type": ["Hot", "Cold"],
+        "Image": "images/apple_cider.jpg"
+      },
+      {
+        "Name": "Coffee",
+        "Price": 11,
+        "Type": ["Hot", "Cold"],
+        "Image": "images/coffee.jpg"
+      },
+      {
+        "Name": "Espresso",
+        "Price": 8,
+        "Type": ["Hot", "Cold"],
+        "Image": "images/espresso.jpg"
+      },
+      {
+        "Name": "Americano",
+        "Price": 9,
+        "Type": ["Hot", "Cold"],
+        "Image": "images/americano.jpg"
+      },
+      {
+        "Name": "Chocolate",
+        "Price": 10,
+        "Type": ["Hot", "Cold"],
+        "Image": "images/hot_chocolate.jpg"
+      }
+     
+    ]
+  }
